@@ -10,3 +10,331 @@
  * License: GNU General Public License v3 or Later
  * License URI: http://www.gnu.org/license/gpl-3.0.html
 **/
+
+// THEME PATH
+    $theme-path: "/wp-content/themes/scgolfpanel";
+
+// COLORS
+    // SCGOLFPANEL BRAND COLLECTION
+        $color-scgolfpanel-green: #00672f;
+        $color-scgolfpanel-brown: #948056;
+        $color-scgolfpanel-beige: #ccc999;
+        $color-scgolfpanel-gray: #444544;
+        $color-scgolfpanel-blue: #0072bb;
+
+    // @IMPORT | FILES
+        @import "variables/colors";
+
+// UNITS
+    // BASE UNIT SETTINGS
+        $unit-base: 1.00rem;
+
+    // SITE WIDTH SETTINGS
+        $site-width-min: 90.00%;
+        $site-width-max: 100.00%;
+        $site-width-content: 1440px;
+
+    // GLOBAL SIZE ADJUSTMENTS
+        $unit-adjustment-none: 0.00;
+        $unit-adjustment-xxs: 0.25;
+        $unit-adjustment-xs: 0.50;
+        $unit-adjustment-sm: 1.00;
+        $unit-adjustment-md: 1.50;
+        $unit-adjustment-lg: 2.00;
+        $unit-adjustment-xl: 2.50;
+        $unit-adjustment-xxl: 3.00;
+
+    // @IMPORT | FILES
+        @import "variables/units";
+
+// MEDIA QUERIES
+    // @IMPORT | FILES
+        @import "variables/media";
+
+    // MEDIA QUERIES
+        $media-xs: $media-col-xs;
+        $media-sm: $media-col-sm;
+        $media-md: $media-col-md;
+        $media-lg: $media-col-lg;
+        $media-xl: $media-col-xl;
+        $media-xxl: $media-col-xxl;
+
+    // MENUS
+        $menu-mobile: $device-mobile;
+        $menu-desktop: $device-desktop;
+
+    // TEMPLATES
+        // GLOBAL
+        // MOBILE
+            @media #{$media-xs} {} //.COL-XS
+            @media #{$media-sm} {} //.COL-SM
+            @media #{$media-md} {} //.COL-MD
+            @media #{$device-mobile} {} //.MOBILE
+
+        // DESKTOP
+            @media #{$device-desktop} {} //.DESKTOP
+            @media #{$media-lg} {} //.COL-LG
+            @media #{$media-xl} {} //.COL-XL
+            @media #{$media-xxl} {} //.COL-XXL
+
+// LINKS
+    $link-color: $color-scgolfpanel-green-0;
+    $link-hover-adjustment: 3.00;
+    $link-hover-adjustment-color: $color-adjustment-light;
+    $link-hover-color: mix($link-color, $link-hover-adjustment-color, $color-adjustment * $link-hover-adjustment);
+
+    // @IMPORT | FILES
+        @import "theme/links";
+
+// SHADOWS
+    $shadow-main: 0.00rem 0.00rem 0.50rem rgba($color-grayscale-dark-9, 0.10);
+    $shadow-text: 0.00rem 0.00rem 0.50rem rgba($color-grayscale-dark-9, 0.90);
+
+    // @IMPORT | FILES
+        @import "theme/shadows";
+
+// TEXT
+    // FONT STACKS
+        $font-sans: Roboto, Helvetica, Arial, sans-serif;
+        $font-serif: Merriweather, Georgia, serif;
+
+    // FONT SIZES
+        $font-size-base: 1.00rem;
+        $font-size-xs: 14px;
+        $font-size-sm: 14px;
+        $font-size-md: 14px;
+        $font-size-lg: 14px;
+        $font-size-xl: 16px;
+        $font-size-xxl: 16px;
+
+    // COLORS
+        $text-color-normal: $color-grayscale-dark-6;
+        $text-color-alt: $color-scgolfpanel-brown-0;
+        $text-color-white: $color-grayscale-light-12;
+        $text-color-light: $color-grayscale-light-9;
+        $text-color-medium: $color-grayscale-0;
+        $text-color-dark: $color-grayscale-dark-9;
+        $text-color-black: $color-grayscale-dark-12;
+
+    // LINE-HEIGHTS
+        $line-height-overlap: 0.90;
+        $line-height-single: 1.00;
+        $line-height-condensed: 1.25;
+        $line-height-normal: 1.50;
+        $line-height-expanded: 1.75;
+        $line-height-double: 2.00;
+
+    // LETTER SPACING
+        $letter-spacing-condensed: -1px;
+        $letter-spacing-normal: 0px;
+        $letter-spacing-expanded: 1px;
+
+    // BODY TEXT
+        $body-text: $font-sans;
+        $body-text-size: $font-size-base;
+        $body-text-color: $text-color-normal;
+        $body-text-height: $line-height-normal;
+        $body-text-spacing: $letter-spacing-normal;
+        $body-text-margin: $margin-sm;
+
+    // HEADING TEXT
+        $heading-text: $font-serif;
+        $heading-text-color: $text-color-dark;
+        $heading-text-size-h1: 3.00rem;
+        $heading-text-size-h2: 2.50rem;
+        $heading-text-size-h3: 2.00rem;
+        $heading-text-size-h4: 1.50rem;
+        $heading-text-size-h5: 1.25rem;
+        $heading-text-size-h6: 1.00rem;
+        $heading-text-style: none;
+        $heading-text-height: $line-height-condensed;
+        $heading-text-spacing: $letter-spacing-normal;
+        $heading-text-margin: $margin-md;
+        $heading-primary-text: $heading-text;
+        $heading-primary-text-color: $heading-text-color;
+        $heading-secondary-text: $body-text;
+        $heading-secondary-text-color: $body-text-color;
+
+    // LINKS
+        $link-text-color: $link-color;
+        $link-hover-text-color: $link-hover-color;
+
+    // ICONS
+        $icon-font: normal normal normal $font-size-base FontAwesome;
+        $icon-margin: $margin-xs;
+
+    // SHADOWS
+        $text-shadow: $shadow-text;
+
+    // @IMPORT | FILES
+        @import "theme/text";
+
+// BORDERS
+    $border-width: 0.20rem;
+    $border-radius: 0.00rem;
+    $border-outline-weight: 1px;
+    $border-color: $color-grayscale-light-12;
+    $border-color-alt: $color-scgolfpanel-brown-0;
+    $border-outline: $border-outline-weight solid $border-color;
+    $border-section: $border-width solid $border-color;
+
+    // @IMPORT | FILES
+        @import "theme/borders";
+
+// BUTTONS
+    $button-text: $body-text;
+    $button-text-size: $body-text-size;
+    $button-text-style: normal;
+    $button-font-weight: 400;
+    $button-color: $link-color;
+    $button-border-radius: 0.25rem;
+    $button-border-weight: $border-outline-weight;
+    $button-margin-vertical: $margin-sm;
+    $button-margin-horizontal: $margin-md;
+    $button-padding-vertical: $padding-xs;
+    $button-padding-horizontal: $padding-md;
+
+    // BUTTON-SOLID
+        $button-solid-color: $button-color;
+        $button-solid-text-color: $text-color-white;
+        $button-solid-hover-color: mix($link-hover-adjustment-color, $button-solid-color, $color-adjustment * $link-hover-adjustment);
+        $button-solid-hover-text-color: $text-color-white;
+
+    // BUTTON-ALT
+        $button-alt-color: $color-grayscale-light-12;
+        $button-alt-text-color: $button-color;
+        $button-alt-hover-color: $button-alt-text-color;
+        $button-alt-hover-text-color: $text-color-white;
+
+    // BUTTON-GHOST
+        $button-ghost-color: transparent;
+        $button-ghost-text-color: $button-color;
+        $button-ghost-hover-color: $button-ghost-text-color;
+        $button-ghost-hover-text-color: $text-color-white;
+
+    // BUTTON-MOBILE
+        $button-mobile-color: $button-solid-color;
+        $button-mobile-text-color: $button-solid-text-color;
+
+    // @IMPORT | FILES
+        @import "theme/buttons";
+
+// BACKGROUNDS
+    // BACKGROUND-1
+        $background-1-color: $color-scgolfpanel-brown-0;
+        $background-1-text-color: $color-scgolfpanel-brown-light-12;
+
+    // BACKGROUND-2
+        $background-2-color: $color-scgolfpanel-beige-0;
+        $background-2-text-color: $color-scgolfpanel-beige-dark-6;
+
+    // BACKGROUND-3
+        $background-3-color: $color-scgolfpanel-gray-0;
+        $background-3-text-color: $color-scgolfpanel-gray-light-12;
+
+    // BACKGROUND-4
+        $background-4-color: $color-scgolfpanel-green-0;
+        $background-4-text-color: $color-scgolfpanel-green-light-12;
+
+    // BACKGROUND-5
+        $background-5-color: $color-scgolfpanel-blue-0;
+        $background-5-text-color: $color-scgolfpanel-blue-light-12;
+
+    // BACKGROUND-6
+        $background-6-color: $color-grayscale-light-12;
+        $background-6-text-color: $text-color-alt;
+
+    // BACKGROUND-7
+        $background-7-color: $color-grayscale-light-12;
+        $background-7-text-color: $text-color-dark;
+
+    // BACKGROUND-8
+        $background-8-color: $color-grayscale-dark-12;
+        $background-8-text-color: $color-grayscale-light-12;
+
+    // @IMPORT | FILES
+        @import "theme/backgrounds";
+
+// GRADIENTS
+    // GRADIENT-1
+        $gradient-1: linear-gradient(0deg, rgba($color-grayscale-dark-9, 0.90%) 0.00%, rgba($color-grayscale-dark-9, 0.60) 50.00%, rgba($color-grayscale-dark-9, 0.50) 100.00%);
+        $gradient-1-text-color: $text-color-white;
+
+    // GRADIENT-2
+        $gradient-2: linear-gradient(0deg, rgba($color-scgolfpanel-green-dark-10, 0.95%) 0.00%, rgba($color-scgolfpanel-green-dark-2, 0.85) 50.00%, rgba($color-scgolfpanel-green-0, 0.60) 100.00%);
+        $gradient-2-text-color: $text-color-white;
+
+    // GRADIENT-3
+        $gradient-3: linear-gradient(0deg, rgba($color-grayscale-dark-9, 0.95%) 0.00%, rgba($color-grayscale-dark-9, 0.85) 50.00%, rgba($color-grayscale-dark-9, 0.50) 100.00%);
+        $gradient-3-text-color: $text-color-white;
+
+    // GRADIENT-4
+        $gradient-4: linear-gradient(0deg, rgba($color-grayscale-dark-9, 0.95%) 0.00%, rgba($color-grayscale-dark-9, 0.85) 50.00%, rgba($color-grayscale-dark-9, 0.50) 100.00%);
+        $gradient-4-text-color: $text-color-white;
+
+    // GRADIENT-5
+        $gradient-5: linear-gradient(0deg, rgba($color-grayscale-dark-9, 0.95%) 0.00%, rgba($color-grayscale-dark-9, 0.85) 50.00%, rgba($color-grayscale-dark-9, 0.50) 100.00%);
+        $gradient-5-text-color: $text-color-white;
+
+    // GRADIENT-6
+        $gradient-6: linear-gradient(0deg, rgba($color-grayscale-dark-9, 0.95%) 0.00%, rgba($color-grayscale-dark-9, 0.85) 50.00%, rgba($color-grayscale-dark-9, 0.50) 100.00%);
+        $gradient-6-text-color: $text-color-white;
+
+    // GRADIENT-7
+        $gradient-7: linear-gradient(0deg, rgba($color-grayscale-dark-9, 0.00%) 0.00%, rgba($color-grayscale-dark-9, 0.85) 50.00%, rgba($color-grayscale-dark-9, 0.50) 100.00%);
+        $gradient-7-text-color: $text-color-white;
+
+    // GRADIENT-8
+        $gradient-8: linear-gradient(0deg, rgba($color-grayscale-dark-9, 0.95%) 0.00%, rgba($color-grayscale-dark-9, 0.85) 50.00%, rgba($color-grayscale-dark-9, 0.50) 100.00%);
+        $gradient-8-text-color: $text-color-white;
+
+    // @IMPORT | FILES
+        @import "theme/gradients";
+
+// TABLES
+    $table-header-background: $color-scgolfpanel-brown-0;
+    $table-subheader-background: $color-scgolfpanel-beige-0;
+    $table-row-odd-background: $color-grayscale-light-11;
+    $table-row-even-background: $color-grayscale-light-9;
+    $table-border: $table-header-background;
+    $table-cell-padding: $padding-xxs;
+
+    // @IMPORT | FILES
+        @import "theme/tables";
+
+// IMAGES
+    // @IMPORT | FILES
+        @import "theme/images";
+
+// VIDEOS
+    // @IMPORT | FILES
+        @import "theme/videos";
+
+// GLOBAL SITE SETTINGS
+    // BODY BACKGROUND COLOR
+        $body-background-color: $color-grayscale-light-12;
+
+    // GUTTERS
+        $gutter-body: 1.00rem;
+        $gutter-columns: $gutter-body * 0.50;
+
+    // @IMPORT | FILES
+        @import "site/global";
+        @import "site/clearfix";
+        @import "site/devices";
+        @import "site/flexbox";
+        @import "site/grids";
+        @import "site/wrappers";
+
+// EXTERNAL
+    // BOOTSTRAP
+        $bootstrap-row-margin: $gutter-body;
+        $bootstrap-columns-margin: $margin-none;
+        $bootstrap-columns-padding: $gutter-columns;
+        
+        // @IMPORT | FILES
+            @import "external/bootstrap";
+
+    // ELEMENTOR
+        // @IMPORT | FILES
+            @import "external/elementor";
